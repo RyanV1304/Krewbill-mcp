@@ -19,10 +19,13 @@ Website: https://krewbill.com
 
 | Tool | What it does |
 |---|---|
-| `get_space_context` | Returns the approved notes for the space your key is limited to. |
-| `suggest_memory` | Proposes a new note. It waits in an approval queue until a person approves it. |
+| `list_spaces` | Lists the spaces your key may read. |
+| `get_space_context` | Returns a space's approved notes (voice and rules, key facts, decisions). Assistants call it first, before drafting for a client or project. |
+| `search_memory` | Searches approved notes by keyword, in one space or in all spaces your key can read. |
+| `suggest_memory` | Proposes a new note. It waits in an approval queue until a person approves it, and never changes shared memory by itself. |
+| `flag_stale` | Flags an approved note as possibly out of date for a person to review. It never edits or removes the note. |
 
-Keys can be read-only, or read-and-suggest. Read-only keys cannot call `suggest_memory`.
+A key can cover one space, several, or all of them, and can be read-only. Read-only keys cannot suggest notes.
 
 ## Connect
 
@@ -34,13 +37,13 @@ Keys can be read-only, or read-and-suggest. Read-only keys cannot call `suggest_
 claude mcp add --transport http krewbill <your-server-address>
 ```
 
-If your tool asks for a header instead of a key in the address, use the plain server address and send `Authorization: Bearer <your-key>`.
+If your tool asks for a header instead of a key in the address, use the plain server address `https://www.krewbill.com/api/mcp` and send `Authorization: Bearer <your-key>`.
 
 Create one key per tool, so you can revoke each separately.
 
 ## Status
 
-Krewbill is in free early access until December 30, 2026. Paid plans are planned, not live. Connections authenticate with keys.
+Krewbill is free during early access, until December 30, 2026. Connections authenticate with keys.
 
 ## Feedback
 
