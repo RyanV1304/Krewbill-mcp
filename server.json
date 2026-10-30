@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.RyanV1304/krewbill-mcp",
+  "title": "Krewbill",
+  "description": "Per-client shared AI memory: approved notes that Claude, ChatGPT and Cursor read over MCP.",
+  "version": "0.1.0",
+  "websiteUrl": "https://krewbill.com",
+  "repository": {
+    "url": "https://github.com/RyanV1304/krewbill-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "REPLACE_WITH_PLAIN_SERVER_ADDRESS",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your Krewbill connection key",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
