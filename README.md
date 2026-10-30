@@ -11,7 +11,8 @@ Website: https://krewbill.com
 - One **space** per client, holding notes a person has approved.
 - Assistants can **read** a space's approved notes.
 - Assistants can only **suggest** new notes. Nothing is saved to the space until a person approves it.
-- Each connection key is limited to one space and can be revoked.
+- Each connection key is limited to the spaces you choose, can be read-only, and can be revoked.
+- Accounts, workspaces, roles and invitations are available in the web app.
 - Works with any MCP client that supports remote (HTTP) servers. Tested with Claude Code; use with other clients may need a different setup.
 
 ## Tools
@@ -39,7 +40,7 @@ Create one key per tool, so you can revoke each separately.
 
 ## Status
 
-Krewbill is in free early access until December 30, 2026. Paid plans are planned, not live. Per-person sign-in is not built yet, and OAuth is not supported.
+Krewbill is in free early access until December 30, 2026. Paid plans are planned, not live. Connections authenticate with keys.
 
 ## Feedback
 
