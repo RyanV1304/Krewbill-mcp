@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://krewbill.com/api/mcp",
+      "url": "https://www.krewbill.com/api/mcp",
       "headers": [
         {
           "name": "Authorization",
